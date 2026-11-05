@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daily Wins · Built For Life</title>
+<meta name="description" content="Daily Wins: a premium body and performance programme for busy professionals, business owners and high-achieving individuals.">
+<meta name="theme-color" content="#0A0A0A">
+<meta property="og:title" content="Daily Wins · Built For Life">
+<meta property="og:description" content="Daily Wins: a premium body and performance programme for busy professionals, business owners and high-achieving individuals.">
+<meta property="og:image" content="assets/curl.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230A0A0A'/%3E%3Cpath d='M18 14h18c8 0 12 4 12 10 0 4-2 7-6 8 5 1 8 4 8 9 0 7-5 11-13 11H18z' fill='%23E3242B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/programme.css">
+<script>document.documentElement.classList.add("js")</script>
+<script>try{history.scrollRestoration="manual"}catch(e){}if(!location.hash){scrollTo(0,0);addEventListener("load",function(){scrollTo(0,0);setTimeout(function(){scrollTo(0,0)},60)})}</script>
+</head>
+<body class="prog-page">
+
+<!-- Preloader: CSS-timed so it can never get stuck -->
+<div class="loader" aria-hidden="true">
+  <div class="loader-in">
+    <svg class="barbell" viewBox="0 0 400 160">
+      <g class="lift">
+        <rect class="bar" x="8" y="77" width="384" height="6" rx="3"/>
+        <rect class="sleeve" x="8" y="74" width="82" height="12" rx="2"/><rect class="sleeve" x="310" y="74" width="82" height="12" rx="2"/>
+        <rect class="collar" x="89" y="68" width="6" height="24" rx="1"/><rect class="collar" x="305" y="68" width="6" height="24" rx="1"/>
+        <rect class="plate r" style="--d:0.06s;--x:-60px" x="73" y="18.0" width="16" height="124" rx="2"/><rect class="plate r" style="--d:0.06s;--x:60px" x="311" y="18.0" width="16" height="124" rx="2"/><rect class="plate r" style="--d:0.18s;--x:-60px" x="55" y="18.0" width="16" height="124" rx="2"/><rect class="plate r" style="--d:0.18s;--x:60px" x="329" y="18.0" width="16" height="124" rx="2"/><rect class="plate b" style="--d:0.3s;--x:-60px" x="41" y="34.0" width="12" height="92" rx="2"/><rect class="plate b" style="--d:0.3s;--x:60px" x="347" y="34.0" width="12" height="92" rx="2"/><rect class="plate b" style="--d:0.42s;--x:-60px" x="29" y="48.0" width="10" height="64" rx="2"/><rect class="plate b" style="--d:0.42s;--x:60px" x="361" y="48.0" width="10" height="64" rx="2"/>
+      </g>
+      <rect class="floor" x="0" y="150" width="400" height="2"/>
+    </svg>
+    <p class="loader-kg"><span>Loading the bar</span><b id="loaderKg">20</b><i>kg</i></p>
+    <span class="loader-word">BUILT<em>FOR</em>LIFE</span>
+  </div>
+</div>
+<script>(function(){var el=document.getElementById("loaderKg");if(!el||matchMedia("(prefers-reduced-motion: reduce)").matches){if(el)el.textContent="130";return}[[200,60],[320,100],[440,120],[560,130]].forEach(function(s){setTimeout(function(){el.textContent=s[1]},s[0])})})()</script>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="index.html" aria-label="Built For Life, home"><span class="logo-mark">B</span><span class="logo-t">BUILT <em>FOR</em> LIFE</span></a>
+    <nav class="links" aria-label="Main">
+      <a href="index.html">Home</a><a href="daily-wins.html" aria-current="page">Daily Wins</a><a href="bridal-bootcamp.html">Bridal Bootcamp</a><a href="transform.html">Your transformation</a>
+    </nav>
+    <a class="btn red sm nav-cta" href="#plans"><span>Choose your plan</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<div class="menu" id="menu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="index.html">Home</a><a href="daily-wins.html">Daily Wins</a><a href="bridal-bootcamp.html">Bridal Bootcamp</a><a href="index.html#about">About</a><a href="#plans" class="red-text">Choose your plan</a>
+  </nav>
+  <p class="menu-foot">+44 7734 432205 · hello@builtforlife.uk</p>
+</div>
+
+<main id="top">
+
+<!-- ============ PINNED HERO: photo (or video) zooms as you scroll, big words step through ============ -->
+<section class="film ph-film" id="film" aria-label="Daily Wins">
+  <div class="film-sticky">
+    <div class="film-media" id="phMedia">
+      <img class="film-poster ph-img" id="phImg" src="assets/curl.jpg" alt="Jory training with an EZ curl bar in the gym" style="object-position:70% 30%">
+      <!-- Jory's Daily Wins video: save it as assets/daily-wins.mp4 and it plays here automatically -->
+      <video class="ph-vid" id="pVideo" muted loop playsinline preload="metadata" hidden><source src="assets/daily-wins.mp4" type="video/mp4"></video>
+      <div class="film-shade" id="filmShade"></div>
+    </div>
+    <div class="film-copy">
+      <div class="phase p0" data-from="0" data-to=".14">
+        <p class="tag"><span class="live"></span>Daily Wins · For busy professionals</p>
+        <h1 class="mega"><span class="ln"><span>Daily</span></span><span class="ln"><span><em class="red-text">wins.</em></span></span></h1>
+        <p class="lede">Your career is performing. Your body should be too. A premium body and performance programme for busy professionals, business owners and high-achievers.</p>
+      </div>
+      <div class="phase pw" data-from="0.18" data-to="0.35"><p class="word">Transform your<br><em class="red-text">physique.</em></p></div>
+      <div class="phase pw" data-from="0.39" data-to="0.57"><p class="word">Rebuild your<br><em class="red-text">energy.</em></p></div>
+      <div class="phase pw" data-from="0.61" data-to="0.78"><p class="word">Regain<br><em class="red-text">control.</em></p></div>
+      <div class="phase pend" data-from=".86" data-to="1.01">
+        <p class="word">Without fitness<br>taking over <em class="red-text">your life.</em></p>
+        <div class="acts"><a class="btn red" href="#plans"><span>Choose your plan</span></a><a class="btn line" href="index.html?pick=Daily%20Wins#start"><span>Free consultation</span></a></div>
+      </div>
+    </div>
+    <div class="hud" aria-hidden="true">
+      <div class="hud-l"><span class="hud-k">WIN</span><b id="hudNum">01</b></div>
+      <div class="hud-bar"><i id="hudBar"></i></div>
+      <div class="hud-r"><span>Daily Wins</span></div>
+    </div>
+    <button class="p-sound" id="pSound" type="button" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Sound on</span></button>
+    <div class="cue" id="cue" aria-hidden="true"><span>Scroll</span><i></i></div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="mq-track" id="mq"><span>Performance</span><b>/</b><span>Energy</span><b>/</b><span>Strength</span><b>/</b><span>Structure</span><b>/</b><span>Accountability</span><b>/</b><span>Confidence</span><b>/</b><span>Performance</span><b>/</b><span>Energy</span><b>/</b><span>Strength</span><b>/</b><span>Structure</span><b>/</b><span>Accountability</span><b>/</b><span>Confidence</span><b>/</b></div></div>
+
+<section class="statement-sec" id="statementSec">
+  <div class="wrap">
+    <p class="kicker reveal">Success shouldn’t come at the expense of your health</p>
+    <p class="statement" id="statement">The problem isn’t <em>ambition</em>. It’s trying to achieve results without a system built around your <em>real life</em>. The Daily Wins programme gives you <em>that system</em>.</p>
+  </div>
+</section>
+<section class="p-state">
+  <div class="wrap p-state-grid">
+    <h2 class="p-big split">Performing at work. <em class="red-text">Privately?</em></h2>
+    <div><p class="reveal">You may be performing at a high level professionally, but privately you know you’re not feeling at your best.</p><ul class="pains"><li><b>01</b><span>Your diary is constantly full</span></li><li><b>02</b><span>Training has become inconsistent</span></li><li><b>03</b><span>Your energy drops during the day</span></li><li><b>04</b><span>Business dinners, travel and social commitments make nutrition difficult</span></li><li><b>05</b><span>You’re no longer as strong, lean or confident as you once were</span></li><li><b>06</b><span>You know what to do, but you don’t have the structure or accountability to do it consistently</span></li></ul></div>
+  </div>
+</section>
+
+<section class="plans" id="plans">
+  <div class="wrap">
+    <div class="plans-head"><div><p class="kicker reveal">Choose your online programme</p><h2 class="h2 split">Pick your <em class="red-text">commitment.</em></h2></div><p class="reveal">Every programme is fully personalised around your schedule, your training setup and your goals.</p></div>
+    
+    <div class="plan-grid" style="--cols:3">
+      <article class="plan reveal" id="plan-t12">
+        <div class="plan-len">12<small>weeks</small></div>
+        <h3>T12 Formula</h3>
+        <p>Twelve focused weeks to rebuild your routine, drop body fat and get your energy back, with a plan that fits around your diary.</p>
+        <div class="plan-price">£999.99</div>
+        <a class="btn red" href="checkout.html?plan=t12"><span>Start my T12</span></a>
+      </article>
+      <article class="plan reveal" id="plan-6m">
+        <div class="plan-len">6<small>months</small></div>
+        <h3>6 Month Total Reset</h3>
+        <p>Six months to properly transform your physique and lock in the habits that keep it that way, through travel, dinners and busy seasons.</p>
+        <div class="plan-price">£2,995</div>
+        <a class="btn red" href="checkout.html?plan=d6m"><span>Buy now</span></a>
+      </article>
+      <article class="plan reveal" id="plan-12m">
+        <div class="plan-len">12<small>months</small></div>
+        <h3>12 Month Elite Partnership</h3>
+        <p>A full year working with Jory. Ongoing coaching, accountability and adjustments as your life and goals change.</p>
+        <div class="plan-price">£4,995</div>
+        <a class="btn red" href="checkout.html?plan=d12m"><span>Buy now</span></a>
+      </article>
+    </div>
+    <p class="plans-note reveal">Not sure which to choose? <a href="transform.html?programme=Daily%20Wins">See your transformation</a>, <a href="index.html?pick=Daily%20Wins#start">book a free consultation</a> or <a href="https://wa.me/447734432205?text=Hi%20Jory%2C%20I%27m%20interested%20in%20Daily%20Wins." target="_blank" rel="noopener">message Jory on WhatsApp</a>.</p>
+  </div>
+</section>
+
+<!-- What's included: pins and steps through as you scroll -->
+<section class="how" id="how">
+  <div class="how-sticky">
+    <div class="how-photo" aria-hidden="true"><img src="assets/cable.jpg" alt="" id="howImg"></div>
+    <div class="wrap how-grid">
+      <div class="how-left">
+        <p class="kicker">What's included</p>
+        <h2 class="h2">Everything<br>you <em class="red-text">need.</em></h2>
+        <div class="how-big" aria-hidden="true"><span id="howNum">01</span><i>/03</i></div>
+      </div>
+      <ol class="how-list" id="howList"><li><h3>Personalised training plan</h3><p>The training plans are all personalised and designed to get maximum results in the time you have. Whether you train from home, in a hotel or in a gym, we tailor the plan to your lifestyle.</p></li><li><h3>Personalised nutrition plan</h3><p>The most important structured element of the programme. Designed to burn fat, improve energy levels and maintain maximum muscle. There are plans available for all dietary needs.</p></li><li><h3>Weekly accountability</h3><p>When you know someone is watching, we all step our game up. Every week we check in on your performance. You get a list of weekly goals to hit, and how well you do shapes the week ahead.</p></li></ol>
+    </div>
+    <div class="how-rail"><i id="howBar"></i></div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="quote-bg" id="quoteBg" style="background-image:url('assets/mirror.jpg')"></div>
+  <div class="wrap">
+    <p class="big-quote split">This isn’t about becoming obsessed with fitness. <em class="red-text">It’s about making your health support the life you’ve worked hard to create.</em></p>
+    <p class="quote-by reveal">Jory, Built For Life</p>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap why-grid">
+    <div class="why-copy">
+      <p class="kicker reveal">More than a physical transformation</p>
+      <h2 class="h2 split">Built around <em class="red-text">your life.</em></h2>
+      <p class="reveal" style="margin-top:24px">This programme is designed to help you:</p>
+    </div>
+    <div><ul class="checks"><li><i><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i><span>Reduce body fat and develop a stronger, more athletic physique</span></li><li><i><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i><span>Improve your strength, fitness and daily energy</span></li><li><i><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i><span>Feel more confident in your clothes and professional environment</span></li><li><i><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i><span>Create structure around demanding work and family commitments</span></li><li><i><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i><span>Stay on track during travel, business meals and social events</span></li><li><i><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i><span>Improve your sleep, focus and overall wellbeing</span></li><li><i><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i><span>Build habits that remain long after the programme finishes</span></li></ul></div>
+  </div>
+</section>
+
+<section class="p-cta">
+  <div class="wrap">
+    <div class="p-cta-in">
+      <div><h2 class="h2 split">Start stacking <em class="red-text">daily wins.</em></h2><p class="reveal">Choose your programme, or book a free consultation and Jory will help you pick the right one.</p></div>
+      <div class="acts reveal"><a class="btn red" href="#plans"><span>Choose your plan</span></a><a class="btn line" href="index.html?pick=Daily%20Wins#start"><span>Free consultation</span></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="closing" id="closing">
+  <div class="wrap">
+    <p class="closing-t" id="closingT"><span>Small wins.</span><span>Every single</span><span><em class="red-text">day.</em></span></p>
+    <a class="other" href="bridal-bootcamp.html"><span>Also from BFL</span><b>Bridal Bootcamp</b><i>→</i></a>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div><a class="logo" href="index.html"><span class="logo-mark">B</span><span class="logo-t">BUILT <em>FOR</em> LIFE</span></a><p class="muted">Personal training for men and women 30+.</p></div>
+    <div><h4>Programmes</h4><a href="daily-wins.html">Daily Wins</a><a href="bridal-bootcamp.html">Bridal Bootcamp</a></div>
+    <div><h4>Explore</h4><a href="index.html#about">About Jory</a><a href="index.html#results">Results</a><a href="index.html#how">How it works</a></div>
+    <div><h4>Contact</h4><a href="tel:+447734432205">+44 7734 432205</a><a href="mailto:hello@builtforlife.uk">hello@builtforlife.uk</a><div class="socials"><a href="https://www.instagram.com/builtforlife_uk" target="_blank" rel="noopener" aria-label="Built For Life on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg></a><a href="https://www.facebook.com/joryjay" target="_blank" rel="noopener" aria-label="Jory on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21z"/></svg></a></div></div>
+  </div>
+  <div class="wrap foot-bot"><span>© <span id="yr"></span> Built For Life UK</span><a href="privacy.html">Privacy</a></div>
+</footer>
+
+<a class="wa" id="wa" href="https://wa.me/447734432205?text=Hi%20Jory%2C%20I%27d%20like%20to%20find%20out%20about%20training." target="_blank" rel="noopener" aria-label="Message Jory on WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+
+<script src="js/page.js"></script>
+</body>
+</html>

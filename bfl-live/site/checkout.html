@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Checkout · Built For Life</title>
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230A0A0A'/%3E%3Cpath d='M18 14h18c8 0 12 4 12 10 0 4-2 7-6 8 5 1 8 4 8 9 0 7-5 11-13 11H18z' fill='%23E3242B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/checkout.css">
+<script>document.documentElement.classList.add("js")</script>
+<script>try{history.scrollRestoration="manual"}catch(e){}if(!location.hash){scrollTo(0,0);addEventListener("load",function(){scrollTo(0,0);setTimeout(function(){scrollTo(0,0)},60)})}</script>
+</head>
+<body class="co-page">
+<div class="co-bg" aria-hidden="true"><i class="co-glow"></i><div class="co-lines"></div></div>
+<canvas class="burst" id="burst" aria-hidden="true"></canvas>
+
+<header class="co-top">
+  <a class="logo" href="index.html" aria-label="Built For Life, home"><span class="logo-mark">B</span><span class="logo-t">BUILT <em>FOR</em> LIFE</span></a>
+  <ol class="co-steps" id="coSteps" aria-label="Checkout progress"><li class="on">Plan</li><li>Details</li><li>Pay</li><li>Welcome</li></ol>
+  <span class="co-secure"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="1.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Secure</span></span>
+</header>
+
+<main class="co" id="co">
+  <!-- ============ the membership card ============ -->
+  <section class="co-stage" aria-label="Your membership card">
+    <div class="card3d" id="card">
+      <div class="card-in" id="cardIn">
+        <div class="face front">
+          <div class="cf-top"><span class="logo-mark sm">B</span><span class="cf-brand">BUILT <em>FOR</em> LIFE</span><span class="cf-tier" id="cProg">Daily Wins</span></div>
+          <svg class="cf-chip" viewBox="0 0 64 30" aria-hidden="true"><rect x="0" y="13" width="64" height="4" rx="2"/><rect x="8" y="3" width="6" height="24" rx="1"/><rect x="15" y="7" width="4" height="16" rx="1"/><rect x="50" y="3" width="6" height="24" rx="1"/><rect x="45" y="7" width="4" height="16" rx="1"/></svg>
+          <div class="cf-plan" id="cPlan" data-hl="plan">Plan</div>
+          <div class="cf-num" id="cNum">BFL ···· ···· 2026</div>
+          <div class="cf-bot">
+            <div data-hl="name"><small>Member</small><b id="cName" class="cf-name">Your name</b></div>
+            <div data-hl="start"><small>Starts</small><b id="cStart">Soon</b></div>
+            <div><small>Length</small><b id="cLen">12 wks</b></div>
+          </div>
+          <i class="shine"></i>
+        </div>
+        <div class="face back">
+          <div class="cb-strip"></div>
+          <div class="cb-body">
+            <span class="cb-stamp">Paid</span>
+            <small>Order</small><b id="cbRef">BFL-0000</b>
+            <small>Total</small><b id="cbAmt">£0</b>
+            <p>Welcome to the team. Bring this energy to week one.</p>
+            <div class="cb-code" aria-hidden="true"></div>
+          </div>
+          <i class="shine"></i>
+        </div>
+      </div>
+      <div class="card-shadow"></div>
+    </div>
+
+    <div class="plans" id="plans" role="radiogroup" aria-label="Choose your plan"></div>
+    <div class="total"><span>Total today</span><b id="sTotal" class="odo">£0</b></div>
+    <p class="total-note" id="sNote"></p>
+  </section>
+
+  <!-- ============ the form ============ -->
+  <section class="co-main" id="coMain">
+    <a class="co-back" id="coBack" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Back</a>
+    <p class="kicker">Checkout</p>
+    <h1 class="co-h"><span class="ln"><span>Make it</span></span> <span class="ln"><span class="red-text">official.</span></span></h1>
+    <p class="co-sub" id="sWhy">Your membership card fills in as you go.</p>
+
+    <form class="co-form" id="coForm" novalidate>
+      <fieldset class="blk" style="--i:0">
+        <legend><b>01</b>Your details</legend>
+        <div class="f"><input id="cNameIn" autocomplete="name" placeholder=" " data-hl="name"><label for="cNameIn">Full name</label></div>
+        <div class="f2">
+          <div class="f"><input id="cEmail" type="email" autocomplete="email" placeholder=" "><label for="cEmail">Email</label></div>
+          <div class="f"><input id="cPhone" type="tel" autocomplete="tel" placeholder=" "><label for="cPhone">Mobile</label></div>
+        </div>
+      </fieldset>
+      <fieldset class="blk" style="--i:1">
+        <legend><b>02</b>Your dates</legend>
+        <div class="f2">
+          <div class="f"><input id="cStartIn" type="date" placeholder=" " data-hl="start"><label for="cStartIn" class="up">Preferred start date</label></div>
+          <div class="f" id="cWedWrap" hidden><input id="cWed" type="date" placeholder=" "><label for="cWed" class="up">Wedding date</label></div>
+        </div>
+      </fieldset>
+      <fieldset class="blk" style="--i:2">
+        <legend><b>03</b>Payment</legend>
+        <div class="payopts" id="payOpts" role="radiogroup" aria-label="How would you like to pay?"></div>
+        <div class="co-pay">
+          <div class="pay-row"><span class="demo-tag">Demo</span><span class="cards" aria-hidden="true"><i>VISA</i><i>MC</i><i>AMEX</i><i>Pay</i></span></div>
+          <p>On the live site this is a secure card payment by Stripe. Card details are never stored on this website.</p>
+          <p class="co-pay-sub">In this demo, paying records the order in Jory's coach panel without charging anything.</p>
+        </div>
+        <label class="check"><input type="checkbox" id="cTerms"><span>I agree to the programme terms and understand this is a personalised coaching programme.</span></label>
+      </fieldset>
+      <p class="err" id="coErr" role="alert"></p>
+      <button class="hold blk" type="button" id="coPay" style="--i:3">
+        <i class="hold-fill" aria-hidden="true"></i>
+        <span class="hold-t"><span class="hold-l">Hold to pay</span> <b id="payAmt">£0</b></span>
+        <span class="hold-ring" aria-hidden="true"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17"/><circle class="p" cx="20" cy="20" r="17"/></svg></span>
+      </button>
+      <p class="hold-hint blk" style="--i:4">Press and hold, or tap and hold on your phone</p>
+    </form>
+  </section>
+
+  <!-- ============ welcome ============ -->
+  <section class="co-done" id="coDone" hidden aria-live="polite">
+    <p class="kicker">Payment received · <span id="dRef">BFL-0000</span></p>
+    <h1 class="co-h"><span class="ln"><span>Welcome to</span></span> <span class="ln"><span>the team,</span></span> <span class="ln"><span class="red-text" id="dName">there.</span></span></h1>
+    <div class="countdown" id="countdown">
+      <b id="cdNum">0</b>
+      <div><span id="cdLbl">days until day one</span><small id="dPlan"></small> <small id="dAmt"></small></div>
+    </div>
+    <ol class="co-next" id="coNext">
+      <li><b>Jory messages you</b> on WhatsApp within 24 hours.</li>
+      <li><b>Kick-off call</b> to set your goals and starting point.</li>
+      <li><b>Your plan lands</b>: training, nutrition and weekly targets.</li>
+      <li><b>Day one.</b> Week by week, towards future you.</li>
+    </ol>
+    <div class="acts"><a class="btn red" id="dPortal" href="portal.html"><span>Open my portal</span></a><a class="btn line" id="dWa" target="_blank" rel="noopener"><span>Message Jory on WhatsApp</span></a></div>
+    <p class="portal-note">Your workouts, food targets, check-ins and chat with Jory all live in your portal. Log in any time with <b id="dEmail">your email</b>.</p>
+  </section>
+</main>
+
+<script src="js/store.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

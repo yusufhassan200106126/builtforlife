@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0A0A0A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Built For Life">
+<title>My Built For Life</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23E3242B'/%3E%3Ctext x='32' y='45' font-family='Arial' font-weight='900' font-size='36' text-anchor='middle' fill='white'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/portal.css">
+<script>try{history.scrollRestoration="manual"}catch(e){}</script>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Built For Life">
+</head>
+<body>
+<div class="pt-bg" aria-hidden="true"><i></i></div>
+<div class="pt" id="pt">
+  <main class="pt-view" id="view" tabindex="-1"></main>
+  <nav class="pt-nav" id="nav" aria-label="Portal" hidden>
+    <a href="#today" data-r="today"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9H4z"/></svg>Today</a>
+    <a href="#train" data-r="train"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10v4M6 7v10M18 7v10M21 10v4M6 12h12"/></svg>Train</a>
+    <a href="#food" data-r="food"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v8a3 3 0 0 0 3 3v7M10 3v6M13 3v8M17 3c-2 2-2 7 0 9v9"/></svg>Food</a>
+    <a href="#progress" data-r="progress"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16M6 15l4-5 3 3 5-7"/></svg>Progress</a>
+    <a href="#team" data-r="team"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.4"/><path d="M3 19c.7-3.3 3-5 6-5s5.3 1.7 6 5M15 14.5c2.6 0 4.5 1.4 5.2 4.2"/></svg>Team</a>
+    <a href="#chat" data-r="chat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H9l-4 4z"/></svg><span id="navCoach">Jory</span><b class="nav-badge" id="chatBadge" hidden></b></a>
+  </nav>
+</div>
+<div class="pt-toasts" id="toasts" aria-live="polite"></div>
+<canvas class="pt-burst" id="burst" aria-hidden="true"></canvas>
+<script src="js/store.js"></script>
+<script src="js/app.js"></script>
+<script src="js/slots.js"></script>
+<script src="js/community.js"></script>
+<script src="js/morph.js"></script>
+<script src="js/portal.js"></script>
+</body>
+</html>

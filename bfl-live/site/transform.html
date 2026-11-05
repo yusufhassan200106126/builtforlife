@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Meet Future You · Built For Life</title>
+<meta name="description" content="Answer a few questions, add a photo and meet future you: a preview of your target with Built For Life, plus the plan that gets you there.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230A0A0A'/%3E%3Cpath d='M18 14h18c8 0 12 4 12 10 0 4-2 7-6 8 5 1 8 4 8 9 0 7-5 11-13 11H18z' fill='%23E3242B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/transform.css">
+<script>document.documentElement.classList.add("js")</script>
+<script>try{history.scrollRestoration="manual"}catch(e){}if(!location.hash){scrollTo(0,0);addEventListener("load",function(){scrollTo(0,0);setTimeout(function(){scrollTo(0,0)},60)})}</script>
+</head>
+<body class="fy-page">
+
+<div class="fy-bg" aria-hidden="true"><i class="glow" id="glow"></i><span class="ghost" id="ghost">00</span><div class="grain"></div></div>
+
+<header class="fy-top" id="top">
+  <a class="logo" href="index.html" aria-label="Built For Life, home"><span class="logo-mark">B</span><span class="logo-t">BUILT <em>FOR</em> LIFE</span></a>
+  <span class="fy-count" id="fyCount" aria-live="polite"></span>
+  <a class="fy-exit" href="index.html" aria-label="Leave and go to the home page"><span>Exit</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></a>
+</header>
+
+<main id="main">
+<!-- ======================= THE FLOW ======================= -->
+<form class="fy" id="fy" novalidate>
+
+  <!-- 0 · intro -->
+  <section class="sc intro on" data-s="0">
+    <p class="kicker">Built For Life · 2 minutes</p>
+    <h1 class="q mega-q"><span class="ln">Meet the</span> <span class="ln">future <em>you.</em></span></h1>
+    <p class="sub">Answer a few quick questions, add a photo, and we'll show you where Jory's plan could take you, week by week.</p>
+    <div class="intro-acts"><button type="submit" class="btn red go"><span>Let's build it</span></button><span class="hint">Press <kbd>Enter</kbd> to move on</span></div>
+    <ul class="intro-chips" aria-hidden="true"><li>10 quick questions</li><li>Your photo stays private</li><li>See your plan instantly</li></ul>
+  </section>
+
+  <!-- 1 · programme -->
+  <section class="sc" data-s="1">
+    <p class="kicker">Your goal</p>
+    <h2 class="q">Which programme are you here for?</h2>
+    <div class="progs">
+      <label class="prog"><input type="radio" name="programme" value="Daily Wins" checked>
+        <span class="prog-in"><img src="assets/curl.jpg" alt=""><span class="prog-txt"><b>Daily Wins</b><small>For busy professionals and high-achievers</small></span><i class="prog-tick" aria-hidden="true"></i></span></label>
+      <label class="prog"><input type="radio" name="programme" value="Bridal Bootcamp">
+        <span class="prog-in"><img src="assets/highfive.jpg" alt=""><span class="prog-txt"><b>Bridal Bootcamp</b><small>Built around your wedding date</small></span><i class="prog-tick" aria-hidden="true"></i></span></label>
+    </div>
+  </section>
+
+  <!-- 2 · name + goal -->
+  <section class="sc" data-s="2">
+    <p class="kicker">About you</p>
+    <h2 class="q">First, what do we call you?</h2>
+    <div class="big-f"><input id="fName" autocomplete="given-name" placeholder="Your first name" aria-label="First name" maxlength="40"></div>
+    <div class="big-f sm"><input id="fGoal" placeholder="In one line, what do you want to change?" aria-label="In one line, what do you want to change?" maxlength="140"></div>
+  </section>
+
+  <!-- 3 · sex + age -->
+  <section class="sc" data-s="3">
+    <p class="kicker">About you</p>
+    <h2 class="q">Nice to meet you<span class="nm"></span>. Tell us a bit more.</h2>
+    <div class="duo">
+      <div class="tiles"><label><input type="radio" name="sex" value="Female" checked><span><b>Female</b></span></label><label><input type="radio" name="sex" value="Male"><span><b>Male</b></span></label></div>
+      <div class="age"><button type="button" class="step-b" data-age="-1" aria-label="Younger">−</button><div class="age-f"><input id="fAge" type="number" inputmode="numeric" min="16" max="90" value="35" aria-label="Age"><small>years old</small></div><button type="button" class="step-b" data-age="1" aria-label="Older">+</button></div>
+    </div>
+  </section>
+
+  <!-- 4 · height -->
+  <section class="sc" data-s="4">
+    <p class="kicker">Your starting point</p>
+    <h2 class="q">How tall are you?</h2>
+    <div class="ruler-w" data-for="fHeight">
+      <div class="read"><input id="fHeight" type="number" inputmode="decimal" min="120" max="230" step="1" value="168" aria-label="Height in centimetres"><span class="unit">cm</span><span class="alt" id="hAlt"></span></div>
+      <div class="ruler" tabindex="-1" aria-hidden="true"><div class="tape"></div><i class="needle"></i></div>
+      <p class="drag-hint">Drag the tape, or type your height</p>
+    </div>
+  </section>
+
+  <!-- 5 · weight -->
+  <section class="sc" data-s="5">
+    <p class="kicker">Your starting point</p>
+    <h2 class="q">What do you weigh right now?</h2>
+    <div class="ruler-w" data-for="fWeight">
+      <div class="read"><input id="fWeight" type="number" inputmode="decimal" min="35" max="250" step="0.5" value="80" aria-label="Weight now in kilograms"><span class="unit">kg</span><span class="alt" id="wAlt"></span></div>
+      <div class="ruler" aria-hidden="true"><div class="tape"></div><i class="needle"></i></div>
+      <p class="drag-hint">Drag the tape, or type your weight</p>
+    </div>
+  </section>
+
+  <!-- 6 · target -->
+  <section class="sc" data-s="6">
+    <p class="kicker">Your target</p>
+    <h2 class="q">Where does future you want to be?</h2>
+    <div class="ruler-w target" data-for="fTarget">
+      <div class="read"><input id="fTarget" type="number" inputmode="decimal" step="0.5" value="72" aria-label="Target weight in kilograms"><span class="unit">kg</span><span class="delta" id="tDelta"></span></div>
+      <div class="ruler" aria-hidden="true"><div class="tape"></div><i class="needle"></i><i class="now-mark" id="nowMark"><span>Now</span></i></div>
+      <p class="tf-help" id="tgtHelp"></p>
+    </div>
+  </section>
+
+  <!-- 7 · training -->
+  <section class="sc dense" data-s="7">
+    <p class="kicker">Your week</p>
+    <h2 class="q">How many days a week can you train?</h2>
+    <div class="days"><label><input type="radio" name="days" value="1"><span>1</span></label><label><input type="radio" name="days" value="2"><span>2</span></label><label><input type="radio" name="days" value="3" checked><span>3</span></label><label><input type="radio" name="days" value="4"><span>4</span></label><label><input type="radio" name="days" value="5+"><span>5+</span></label></div>
+    <p class="row-l">Training experience</p>
+    <div class="pills big"><label><input type="radio" name="experience" value="Beginner"><span>Beginner</span></label><label><input type="radio" name="experience" value="Returning" checked><span>Returning</span></label><label><input type="radio" name="experience" value="Some"><span>Some</span></label><label><input type="radio" name="experience" value="Regular"><span>Regular</span></label></div>
+  </section>
+
+  <!-- 8 · lifestyle -->
+  <section class="sc dense" data-s="8">
+    <p class="kicker">Your lifestyle</p>
+    <h2 class="q">And the rest of your life?</h2>
+    <p class="row-l">Where you'll train</p>
+    <div class="pills big"><label><input type="radio" name="where" value="Gym" checked><span>Gym</span></label><label><input type="radio" name="where" value="Home"><span>Home</span></label><label><input type="radio" name="where" value="Hotel / travelling"><span>Hotel / travelling</span></label></div>
+    <p class="row-l">Diet</p>
+    <div class="pills big"><label><input type="radio" name="diet" value="No restrictions" checked><span>No restrictions</span></label><label><input type="radio" name="diet" value="Vegetarian"><span>Vegetarian</span></label><label><input type="radio" name="diet" value="Vegan"><span>Vegan</span></label><label><input type="radio" name="diet" value="Halal"><span>Halal</span></label><label><input type="radio" name="diet" value="Other"><span>Other</span></label></div>
+    <div class="sleep"><div class="sleep-top"><span class="row-l">Average sleep</span><b id="sleepOut">7 hrs</b></div>
+      <div class="moon" aria-hidden="true"><i id="moonFill"></i></div>
+      <input type="range" id="fSleep" min="4" max="10" step="0.5" value="7" aria-label="Average hours of sleep"></div>
+    <div class="f wed" id="wedWrap" hidden><input id="fWed" type="date" placeholder=" "><label for="fWed" class="up">Wedding date</label></div>
+  </section>
+
+  <!-- 9 · photo -->
+  <section class="sc dense" data-s="9">
+    <p class="kicker">Your photo</p>
+    <h2 class="q">Add a photo of you now.</h2>
+    <div class="cam">
+      <label class="finder" id="drop">
+        <input type="file" id="fPhoto" accept="image/*" capture="user">
+        <img id="photoPrev" alt="Your photo" hidden>
+        <i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+        <svg class="outline" viewBox="0 0 300 400" aria-hidden="true"><circle cx="150" cy="86" r="36"/><path d="M90 140q60-24 120 0l18 120-26 6-8-70-4 200h-36l-4-140-4 140h-36l-4-200-8 70-26-6z"/></svg>
+        <i class="sweep"></i>
+        <span class="finder-txt" id="dropTxt"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><b>Take or upload a photo</b><small>Tap to open your camera</small></span>
+        <span class="rec" aria-hidden="true">REC</span>
+      </label>
+      <ul class="tips">
+        <li><b>Stand straight</b>, facing the camera, arms by your sides</li>
+        <li><b>Full body or waist up</b>, centred in the frame</li>
+        <li><b>Plain background</b> and good light</li>
+        <li><b>Fitted clothes</b> show your progress best</li>
+        <li class="priv">Only Jory sees your photo. <button type="button" class="link" id="skipPhoto">Skip photo</button></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 10 · contact -->
+  <section class="sc dense" data-s="10">
+    <p class="kicker">Last step</p>
+    <h2 class="q">Where should Jory send your plan?</h2>
+    <div class="f"><input id="fPhone" type="tel" autocomplete="tel" placeholder=" "><label for="fPhone">Mobile (for WhatsApp)</label></div>
+    <div class="f"><input id="fEmail" type="email" autocomplete="email" placeholder=" "><label for="fEmail">Email</label></div>
+    <label class="check"><input type="checkbox" id="fConsent"><span>I'm happy for Built For Life to keep my answers and photo to build my plan, and to contact me about it. An AI image tool may edit my photo to make the preview. The preview is an illustration of a target, not a guaranteed result. <a href="privacy.html" target="_blank" rel="noopener">Privacy</a></span></label>
+  </section>
+
+  <!-- controls -->
+  <div class="fy-ctl" id="fyCtl">
+    <p class="err" id="tfErr" role="alert"></p>
+    <div class="fy-ctl-in">
+      <button type="button" class="back-b" id="tfBack" aria-label="Back"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="bar-prog" aria-hidden="true">
+        <svg viewBox="0 0 420 80" class="bb">
+          <rect class="bb-bar" x="6" y="37" width="408" height="6" rx="3"/>
+          <rect class="bb-sl" x="6" y="34" width="96" height="12" rx="2"/><rect class="bb-sl" x="318" y="34" width="96" height="12" rx="2"/>
+          <rect class="bb-col" x="100" y="28" width="6" height="24"/><rect class="bb-col" x="314" y="28" width="6" height="24"/>
+          <g id="plates"></g>
+        </svg>
+        <span class="bb-kg"><b id="bbKg">20</b> kg on the bar</span>
+      </div>
+      <button type="submit" class="btn red" id="tfNext"><span>Next</span></button>
+    </div>
+  </div>
+</form>
+
+<!-- ======================= BUILDING ======================= -->
+<section class="gen" id="gen" hidden aria-live="polite">
+  <div class="gen-stage">
+    <div class="gen-frame"><canvas id="genCanvas" width="360" height="480"></canvas><canvas id="genMesh" width="360" height="480"></canvas><i class="scan"></i><i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i></div>
+    <div class="gen-side">
+      <p class="kicker">Building future you</p>
+      <ol class="gen-log" id="genLog"></ol>
+      <div class="gen-pct"><b id="genPct">0</b><span>%</span></div>
+    </div>
+  </div>
+</section>
+<div class="flash" id="flash" aria-hidden="true"></div>
+
+<!-- ======================= RESULT: TIME MACHINE ======================= -->
+<section class="res" id="result" hidden>
+  <div class="wrap">
+    <header class="res-head">
+      <p class="kicker">Your time machine</p>
+      <h1 class="res-h"><span class="ln"><span id="rName">You</span>,</span> <span class="ln">meet future <em>you.</em></span></h1>
+    </header>
+
+    <div class="tm">
+      <div class="tm-stage" id="stage">
+        <canvas id="morphCanvas"></canvas>
+        <div class="split" id="split" hidden><i></i><span>Now</span><span>Future</span></div>
+        <i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+        <div class="hud">
+          <div class="hud-l"><span>Week</span><b class="odo" id="odoWeek">00</b></div>
+          <div class="hud-r"><span>Weight</span><b class="odo" id="odoKg">0.0</b><small>kg</small></div>
+        </div>
+        <span class="hud-tag" id="hudTag">Now</span>
+      </div>
+
+      <div class="tm-track">
+        <button type="button" class="tm-play" id="playBtn" aria-label="Pause"><svg viewBox="0 0 24 24"><path id="playIcon" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg></button>
+        <div class="track" id="track">
+          <div class="track-line"><i id="trackFill"></i></div>
+          <div class="track-marks" id="trackMarks"></div>
+          <input type="range" id="morphRange" min="0" max="1000" value="0" aria-label="Travel from now to your target week">
+        </div>
+        <button type="button" class="tm-cmp" id="cmpBtn" aria-pressed="false">Split view</button>
+      </div>
+      <p class="stage-note">Demo preview. An AI-generated image will replace this once it's connected. It shows a target, not a guaranteed result.</p>
+    </div>
+
+    <div class="res-grid">
+      <div class="stats">
+        <div class="st"><span>Now</span><b><i id="nNow">0</i><small>kg</small></b></div>
+        <div class="st red"><span>Future you</span><b><i id="nTarget">0</i><small>kg</small></b></div>
+        <div class="st"><span>To lose</span><b><i id="nLose">0</i><small>kg</small></b></div>
+        <div class="st"><span>Healthy pace</span><b><i id="nPace">0</i><small>kg/wk</small></b></div>
+        <div class="st wide"><span>Time at a healthy pace</span><b><i id="nWeeks">0</i><small>weeks</small></b>
+          <svg class="chart" id="chart" viewBox="0 0 400 170" preserveAspectRatio="none" aria-label="Projected weight"></svg></div>
+      </div>
+
+      <div class="ticket" id="rec">
+        <div class="tk-top"><span class="kicker">Recommended for you</span><span class="tk-no" id="tkNo">No. 0001</span></div>
+        <h3 id="recName">Plan</h3>
+        <p id="recWhy"></p>
+        <div class="tk-cut" aria-hidden="true"></div>
+        <div class="tk-price"><b id="recPrice">£0</b><span id="recLen"></span></div>
+        <ul class="tk-incl"><li>Personalised training</li><li>Personalised nutrition</li><li>Weekly accountability</li><li>WhatsApp support from Jory</li></ul>
+        <div class="tk-acts"><a class="btn red full" id="recBuy" href="checkout.html"><span>Start this plan</span></a><a class="btn line full" id="recWa" target="_blank" rel="noopener"><span>Talk to Jory first</span></a></div>
+      </div>
+    </div>
+
+    <div class="reel">
+      <div class="reel-h"><p class="kicker">Your <span id="jWeeks">12</span> week journey</p><span class="reel-hint">Swipe →</span></div>
+      <ol class="reel-list" id="jList"></ol>
+    </div>
+    <p class="restart"><button type="button" class="link" id="restart">Start again</button></p>
+  </div>
+</section>
+</main>
+
+<footer class="foot" id="foot" hidden>
+  <div class="wrap foot-grid">
+    <div><a class="logo" href="index.html"><span class="logo-mark">B</span><span class="logo-t">BUILT <em>FOR</em> LIFE</span></a><p class="muted">Personal training for men and women 30+.</p></div>
+    <div><h4>Programmes</h4><a href="daily-wins.html">Daily Wins</a><a href="bridal-bootcamp.html">Bridal Bootcamp</a></div>
+    <div><h4>Explore</h4><a href="index.html#about">About Jory</a><a href="index.html#results">Results</a><a href="index.html#how">How it works</a></div>
+    <div><h4>Contact</h4><a href="tel:+447734432205">+44 7734 432205</a><a href="mailto:hello@builtforlife.uk">hello@builtforlife.uk</a><div class="socials"><a href="https://www.instagram.com/builtforlife_uk" target="_blank" rel="noopener" aria-label="Built For Life on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg></a><a href="https://www.facebook.com/joryjay" target="_blank" rel="noopener" aria-label="Jory on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21z"/></svg></a></div></div>
+  </div>
+  <div class="wrap foot-bot"><span>© <span id="yr"></span> Built For Life UK</span></div>
+</footer>
+
+<script src="js/store.js"></script>
+<script src="js/morph.js"></script>
+<script src="js/transform.js"></script>
+</body>
+</html>

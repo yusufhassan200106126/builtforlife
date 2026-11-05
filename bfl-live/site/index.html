@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Built For Life · Personal Training for Men &amp; Women 30+</title>
+<meta name="description" content="Built For Life helps men and women 30+ rebuild their body, mindset and confidence. Daily Wins coaching and Bridal Bootcamp with Jory.">
+<meta name="theme-color" content="#0A0A0A">
+<meta property="og:title" content="Built For Life">
+<meta property="og:description" content="Rebuild your body, mindset and confidence. Personal training for men and women 30+.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230A0A0A'/%3E%3Cpath d='M18 14h18c8 0 12 4 12 10 0 4-2 7-6 8 5 1 8 4 8 9 0 7-5 11-13 11H18z' fill='%23E3242B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://videos.pexels.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script>try{history.scrollRestoration="manual"}catch(e){}if(!location.hash){scrollTo(0,0);addEventListener("load",function(){scrollTo(0,0);setTimeout(function(){scrollTo(0,0)},60)})}</script>
+</head>
+<body>
+
+<!-- Preloader: CSS-timed so it can never get stuck -->
+<div class="loader" aria-hidden="true">
+  <div class="loader-in">
+    <svg class="barbell" viewBox="0 0 400 160">
+      <g class="lift">
+        <rect class="bar" x="8" y="77" width="384" height="6" rx="3"/>
+        <rect class="sleeve" x="8" y="74" width="82" height="12" rx="2"/><rect class="sleeve" x="310" y="74" width="82" height="12" rx="2"/>
+        <rect class="collar" x="89" y="68" width="6" height="24" rx="1"/><rect class="collar" x="305" y="68" width="6" height="24" rx="1"/>
+        <rect class="plate r" style="--d:0.06s;--x:-60px" x="73" y="18.0" width="16" height="124" rx="2"/><rect class="plate r" style="--d:0.06s;--x:60px" x="311" y="18.0" width="16" height="124" rx="2"/><rect class="plate r" style="--d:0.18s;--x:-60px" x="55" y="18.0" width="16" height="124" rx="2"/><rect class="plate r" style="--d:0.18s;--x:60px" x="329" y="18.0" width="16" height="124" rx="2"/><rect class="plate b" style="--d:0.3s;--x:-60px" x="41" y="34.0" width="12" height="92" rx="2"/><rect class="plate b" style="--d:0.3s;--x:60px" x="347" y="34.0" width="12" height="92" rx="2"/><rect class="plate b" style="--d:0.42s;--x:-60px" x="29" y="48.0" width="10" height="64" rx="2"/><rect class="plate b" style="--d:0.42s;--x:60px" x="361" y="48.0" width="10" height="64" rx="2"/>
+      </g>
+      <rect class="floor" x="0" y="150" width="400" height="2"/>
+    </svg>
+    <p class="loader-kg"><span>Loading the bar</span><b id="loaderKg">20</b><i>kg</i></p>
+    <span class="loader-word">BUILT<em>FOR</em>LIFE</span>
+  </div>
+</div>
+<script>(function(){var el=document.getElementById("loaderKg");if(!el||matchMedia("(prefers-reduced-motion: reduce)").matches){if(el)el.textContent="130";return}[[200,60],[320,100],[440,120],[560,130]].forEach(function(s){setTimeout(function(){el.textContent=s[1]},s[0])})})()</script>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- Header -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top" aria-label="Built For Life, home"><span class="logo-mark">B</span><span class="logo-t">BUILT <em>FOR</em> LIFE</span></a>
+    <nav class="links" aria-label="Main">
+      <a href="#programmes">Programmes</a><a href="#results">Results</a><a href="#about">About</a><a href="transform.html">Your transformation</a>
+    </nav>
+    <a class="btn red sm nav-cta" href="#start"><span>Free consultation</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<div class="menu" id="menu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="#programmes">Programmes</a><a href="#results">Results</a><a href="#about">About</a><a href="transform.html">Your transformation</a><a href="#start" class="red-text">Get started</a>
+  </nav>
+  <p class="menu-foot">+44 7734 432205 · hello@builtforlife.uk</p>
+</div>
+
+<main id="top">
+
+<!-- ================= SCROLL FILM =================
+     Scroll down: the clip plays forwards. Scroll up: it plays backwards.
+     The clip is set in js/main.js (FILM). -->
+<section class="film" id="film" aria-label="Introduction">
+  <div class="film-sticky">
+    <div class="film-media">
+      <img class="film-poster" id="filmPoster" src="assets/film-poster.jpg" alt="">
+      <video class="film-video" id="filmVideo" muted playsinline preload="auto" disablepictureinpicture aria-hidden="true"></video>
+      <canvas class="film-canvas" id="filmCanvas" aria-hidden="true"></canvas>
+      <div class="film-shade" id="filmShade"></div>
+    </div>
+
+    <div class="film-copy">
+      <!-- phase 0 -->
+      <div class="phase p0" data-from="0" data-to=".16">
+        <p class="tag"><span class="live"></span>Personal training · 30+</p>
+        <h1 class="mega"><span class="ln"><span>Built</span></span><span class="ln"><span>for <em class="red-text">life.</em></span></span></h1>
+        <p class="lede">We help men and women 30+ rebuild their body, mindset and confidence. Scroll to see what one rep can start.</p>
+      </div>
+      <!-- phases 1–3 -->
+      <div class="phase pw" data-from=".2" data-to=".38"><p class="word">Rebuild<br>your <em class="red-text">body.</em></p></div>
+      <div class="phase pw" data-from=".42" data-to=".6"><p class="word">Reset<br>your <em class="red-text">mindset.</em></p></div>
+      <div class="phase pw" data-from=".64" data-to=".8"><p class="word">Own your<br><em class="red-text">confidence.</em></p></div>
+      <!-- phase 4 -->
+      <div class="phase pend" data-from=".86" data-to="1.01">
+        <p class="word">Let's get<br>to <em class="red-text">work.</em></p>
+        <div class="acts"><a class="btn red" href="#start"><span>Book a free consultation</span></a><a class="btn line" href="#programmes"><span>See programmes</span></a></div>
+      </div>
+    </div>
+
+    <!-- HUD -->
+    <div class="hud" aria-hidden="true">
+      <div class="hud-l"><span class="hud-k">REP</span><b id="hudRep">00</b></div>
+      <div class="hud-bar"><i id="hudBar"></i></div>
+      <div class="hud-r"><span id="hudTime">00:00.0</span><span class="rewind" id="rewind">◀◀ Rewind</span></div>
+    </div>
+    <div class="cue" id="cue" aria-hidden="true"><span>Scroll</span><i></i></div>
+  </div>
+</section>
+
+<!-- Advert: Jory's welcome video pops up as you arrive -->
+<section class="advert" id="advert" aria-label="Welcome video from Jory">
+  <div class="wrap ad-head">
+    <div><p class="kicker reveal">Watch · 48 seconds</p><h2 class="h2 split">A word from <em class="red-text">Jory.</em></h2></div>
+    <p class="ad-intro reveal">Who Built For Life is for, how it works and what you can expect when you start.</p>
+  </div>
+  <div class="wrap">
+    <div class="ad-card" id="adCard">
+      <video id="adVideo" playsinline muted loop preload="metadata" poster="assets/welcome-poster.jpg">
+        <source src="assets/welcome.mp4" type="video/mp4">
+      </video>
+      <div class="ad-shade"></div>
+      <button class="ad-sound" id="adSound" type="button">
+        <span class="ad-ring"></span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span id="adSoundTxt">Watch with sound</span>
+      </button>
+      <div class="ad-ui">
+        <button class="ad-play" id="adPlay" type="button" aria-label="Pause"><svg viewBox="0 0 24 24" aria-hidden="true"><path id="adPlayIcon" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg></button>
+        <div class="ad-bar" id="adBarWrap"><i id="adBar"></i></div>
+        <span class="ad-time" id="adTime">0:00 / 0:48</span>
+        <button class="ad-mute" id="adMute" type="button" aria-label="Mute">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path id="adMuteWaves" d="M15.5 8.5a5 5 0 0 1 0 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="ad-end" id="adEnd" hidden>
+        <p class="kicker">Ready when you are</p>
+        <p class="ad-end-t">Your first rep <em class="red-text">starts here.</em></p>
+        <div class="acts"><a class="btn red" href="#start"><span>Book a free consultation</span></a><button class="btn line" id="adReplay" type="button"><span>Watch again</span></button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track" id="mq">
+    <span>Strength</span><b>/</b><span>Mobility</span><b>/</b><span>Nutrition</span><b>/</b><span>Accountability</span><b>/</b><span>Confidence</span><b>/</b>
+    <span>Strength</span><b>/</b><span>Mobility</span><b>/</b><span>Nutrition</span><b>/</b><span>Accountability</span><b>/</b><span>Confidence</span><b>/</b>
+  </div>
+</div>
+
+<!-- Statement -->
+<section class="statement-sec" id="statementSec">
+  <div class="wrap">
+    <p class="kicker reveal">The mission</p>
+    <p class="statement" id="statement">No crash diets. No punishment. Just structure, support and a plan that fits the life you <em>actually</em> live, so the results <em>stay</em>.</p>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <figure class="about-photo">
+      <div class="about-clip" id="aboutClip"><img id="aboutImg" src="assets/mirror.jpg" alt="Jory in the gym, wearing Built For Life kit"></div>
+      <figcaption><span>Jory</span>Founder &amp; coach</figcaption>
+    </figure>
+    <div class="about-copy">
+      <p class="kicker reveal">Meet your coach</p>
+      <h2 class="h2 split">Hi, I'm <em class="red-text">Jory.</em></h2>
+      <p class="reveal">I started Built For Life for people who have tried the extreme stuff and are done with it. You've got work, family and a body that doesn't bounce back like it did at 20. That's exactly who I train.</p>
+      <p class="reveal">My job is to give you structure, support and realistic methods that get you stronger, leaner and more confident, and keep you there.</p>
+      <div class="facts reveal">
+        <div><b>30+</b><span>Who we train</span></div>
+        <div><b>2</b><span>Ways to work with me</span></div>
+        <div><b>1</b><span>Plan, built around you</span></div>
+      </div>
+      <a class="btn line reveal" href="#start"><span>Talk to Jory</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Programmes: two ways to work with Jory -->
+<section class="programmes" id="programmes">
+  <div class="wrap">
+    <div class="pg-head">
+      <div><p class="kicker reveal">Choose your programme</p><h2 class="h2 split">Pick your <em class="red-text">path.</em></h2></div>
+      <p class="pg-intro reveal">Two ways to work with Jory. Both are built around your life, your goals and the equipment you have.</p>
+    </div>
+    <div class="pg-grid">
+      <article class="pg-card reveal">
+        <div class="pg-img"><img src="assets/cable.jpg" alt="Jory coaching a client on the cable machine"><span class="pg-tag">Online coaching</span><span class="pg-no">01</span></div>
+        <div class="pg-body"><h3>Daily Wins</h3>
+          <p>Ongoing coaching without a rigid programme. Small daily habits, steady progress and someone in your corner every week, so the results stick for good.</p>
+          <ul><li>Daily habit targets</li><li>Flexible training: gym, home or bodyweight</li><li>Nutrition guidance that fits your life</li><li>Weekly check-ins and ongoing support</li></ul>
+          <a class="pg-go" href="daily-wins.html">Explore Daily Wins <span>→</span></a></div>
+      </article>
+      <article class="pg-card reveal">
+        <div class="pg-img"><img src="assets/highfive.jpg" alt="Jory high-fiving women after a session"><span class="pg-tag">Bespoke package</span><span class="pg-no">02</span></div>
+        <div class="pg-body"><h3>Bridal Bootcamp</h3>
+          <p>A focused plan to look and feel your best on the day, counted down to your wedding date. Structured, realistic and built to keep you calm, not crash dieting.</p>
+          <ul><li>Countdown plan timed to your date</li><li>Training built around your schedule</li><li>Nutrition support</li><li>Weekly check-ins</li></ul>
+          <a class="pg-go" href="bridal-bootcamp.html">Explore Bridal Bootcamp <span>→</span></a></div>
+      </article>
+    </div>
+  </div>
+  <div class="wrap"><a class="tf-cta" href="transform.html"><span class="tf-cta-k">New · 2 minutes</span><b>See your transformation</b><span class="tf-cta-p">Answer a few questions, add a photo and see your target, plus the plan that gets you there.</span><i>→</i></a></div>
+</section>
+
+<!-- Results -->
+<section class="results" id="results">
+  <div class="wrap">
+    <div class="sec-head"><p class="kicker reveal">Real people, real results</p><h2 class="h2 split">Proof, <em class="red-text">not promises.</em></h2></div>
+    <!-- REPLACE: swap these photos for the real before/after photos from the current site -->
+    <div class="rs-grid" id="rsGrid">
+      <figure class="rs"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=70" alt="Nicola's result"><figcaption><b>Nicola</b></figcaption></figure>
+      <figure class="rs"><img src="https://images.unsplash.com/photo-1549476464-37392f717541?auto=format&fit=crop&w=800&q=70" alt="Dan's result"><figcaption><b>Dan</b></figcaption></figure>
+      <figure class="rs"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=70" alt="Sam's result"><figcaption><b>Sam</b></figcaption></figure>
+      <figure class="rs"><img src="https://images.unsplash.com/photo-1584466977773-e625c37cdd50?auto=format&fit=crop&w=800&q=70" alt="Matt's result"><figcaption><b>Matt</b></figcaption></figure>
+      <figure class="rs"><img src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=800&q=70" alt="Cara's result"><figcaption><b>Cara</b></figcaption></figure>
+      <figure class="rs"><img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?auto=format&fit=crop&w=800&q=70" alt="Sophie's result"><figcaption><b>Sophie</b></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- How it works: pinned, steps advance with scroll -->
+<section class="how" id="how">
+  <div class="how-sticky">
+    <div class="wrap how-grid">
+      <div class="how-left">
+        <p class="kicker">How it works</p>
+        <h2 class="h2">Four steps.<br><em class="red-text">No guesswork.</em></h2>
+        <div class="how-big" aria-hidden="true"><span id="howNum">01</span><i>/04</i></div>
+      </div>
+      <ol class="how-list" id="howList">
+        <li><h3>Set achievable goals</h3><p>We talk about what's driving you and set targets you can actually hit, then build from there.</p></li>
+        <li><h3>Nutrition planning</h3><p>Healthy eating habits that suit your goals and your life. No food you hate, no starving.</p></li>
+        <li><h3>Your training plan</h3><p>Sessions built around your ability, your equipment (full gym, home or bodyweight) and any limitations.</p></li>
+        <li><h3>Accountability</h3><p>Structured check-ins and ongoing support, so you keep going when motivation dips.</p></li>
+      </ol>
+    </div>
+    <div class="how-rail"><i id="howBar"></i></div>
+  </div>
+</section>
+
+<!-- Quote -->
+<section class="quote">
+  <div class="quote-bg" id="quoteBg"></div>
+  <div class="wrap">
+    <p class="big-quote split">“Structure, support and realistic methods. <em class="red-text">Not extremes.</em> That's how results last.”</p>
+    <p class="quote-by reveal">Jory, Built For Life</p>
+  </div>
+</section>
+
+<!-- Consultation -->
+<section class="start" id="start">
+  <div class="wrap start-grid">
+    <div class="start-copy">
+      <p class="kicker reveal">Free consultation</p>
+      <h2 class="h2 split">Your first rep <em class="red-text">starts here.</em></h2>
+      <p class="reveal">Tell me a little about you and what you want to change. I'll message you back to book a free, no-pressure chat.</p>
+      <ul class="contact-list reveal">
+        <li><span>Call or WhatsApp</span><a href="tel:+447734432205">+44 7734 432205</a></li>
+        <li><span>Email</span><a href="mailto:hello@builtforlife.uk">hello@builtforlife.uk</a></li>
+        <li><span>Instagram</span><a href="https://www.instagram.com/builtforlife_uk" target="_blank" rel="noopener">@builtforlife_uk</a></li>
+      </ul>
+    </div>
+    <form class="form reveal" id="form" novalidate>
+      <div class="f"><input id="fName" autocomplete="name" placeholder=" " required><label for="fName">Your name</label></div>
+      <div class="f2">
+        <div class="f"><input id="fPhone" type="tel" autocomplete="tel" placeholder=" " required><label for="fPhone">Mobile</label></div>
+        <div class="f"><input id="fEmail" type="email" autocomplete="email" placeholder=" "><label for="fEmail">Email (optional)</label></div>
+      </div>
+      <fieldset class="pick"><legend>I'm interested in</legend>
+        <div class="pills" id="pills">
+          <label><input type="radio" name="goal" value="Daily Wins" checked><span>Daily Wins</span></label>
+          <label><input type="radio" name="goal" value="Bridal Bootcamp"><span>Bridal Bootcamp</span></label>
+          <label><input type="radio" name="goal" value="Not sure yet"><span>Not sure yet</span></label>
+        </div>
+      </fieldset>
+      <div class="f"><textarea id="fMsg" rows="3" placeholder=" "></textarea><label for="fMsg">What do you want to change? (optional)</label></div>
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn red full" type="submit"><span>Send on WhatsApp</span></button>
+      <p class="fine">Opens WhatsApp with your message ready to send. Prefer email? <a href="#" id="mailLink">Send by email</a>.</p>
+      <div class="sent" id="sent" hidden>
+        <b>Nice one.</b><p>Your message is ready in WhatsApp. Hit send and Jory will get back to you.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Closing -->
+<section class="closing" id="closing">
+  <div class="wrap">
+    <p class="closing-t" id="closingT"><span>The only</span><span>training plan</span><span>you'll <em class="red-text">need.</em></span></p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div><a class="logo" href="#top"><span class="logo-mark">B</span><span class="logo-t">BUILT <em>FOR</em> LIFE</span></a><p class="muted">Personal training for men and women 30+.</p></div>
+    <div><h4>Programmes</h4><a href="daily-wins.html">Daily Wins</a><a href="bridal-bootcamp.html">Bridal Bootcamp</a></div>
+    <div><h4>Explore</h4><a href="#about">About Jory</a><a href="#results">Results</a><a href="#how">How it works</a></div>
+    <div><h4>Contact</h4><a href="tel:+447734432205">+44 7734 432205</a><a href="mailto:hello@builtforlife.uk">hello@builtforlife.uk</a><div class="socials"><a href="https://www.instagram.com/builtforlife_uk" target="_blank" rel="noopener" aria-label="Built For Life on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg></a><a href="https://www.facebook.com/joryjay" target="_blank" rel="noopener" aria-label="Jory on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21z"/></svg></a></div></div>
+  </div>
+  <div class="wrap foot-bot"><span>© <span id="yr"></span> Built For Life UK</span><a href="privacy.html">Privacy</a></div>
+</footer>
+
+<a class="wa" id="wa" href="https://wa.me/447734432205?text=Hi%20Jory%2C%20I%27d%20like%20to%20find%20out%20about%20training." target="_blank" rel="noopener" aria-label="Message Jory on WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+# Built For Life on Cloudflare Pages. See SETUP.md.
+name = "builtforlife"
+pages_build_output_dir = "site"
+compatibility_date = "2026-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "bfl"
+database_id = "PASTE-YOUR-D1-DATABASE-ID-HERE"
+
+[[r2_buckets]]
+binding = "PHOTOS"
+bucket_name = "bfl-photos"
+
+[vars]
+# Who can log in to the coach panel (comma separated)
+COACH_EMAILS = "jory@builtforlife.uk"
+EMAIL_FROM = "Built For Life <hello@builtforlife.uk>"
+# "1" shows login codes on screen while testing. Set to "0" before real clients use it.
+DEMO_CODES = "1"
+# Max AI "future you" images per day (cost cap)
+AI_DAILY_LIMIT = "100"
+COACH_WHATSAPP = "447734432205"
