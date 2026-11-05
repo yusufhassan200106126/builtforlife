@@ -1,8 +1,14 @@
-# Built For Life on Cloudflare Pages. See SETUP.md.
+# Built For Life on Cloudflare Workers. See SETUP.md.
+# "name" must match the Worker's name in the Cloudflare dashboard.
 name = "builtforlife"
-pages_build_output_dir = "site"
+main = "worker.js"
 compatibility_date = "2026-09-01"
 compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./site"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
 
 [[d1_databases]]
 binding = "DB"
@@ -17,8 +23,10 @@ bucket_name = "bfl-photos"
 # Who can log in to the coach panel (comma separated)
 COACH_EMAILS = "jory@builtforlife.uk"
 EMAIL_FROM = "Built For Life <hello@builtforlife.uk>"
-# "1" shows login codes on screen while testing. Set to "0" before real clients use it.
+# While testing: "1" shows the login code on screen, but ONLY for the emails in TEST_EMAILS.
+# Everyone else always gets their code by email. Set DEMO_CODES to "0" before launch.
 DEMO_CODES = "1"
+TEST_EMAILS = "jory@builtforlife.uk,YOUR-EMAIL-HERE"
 # Max AI "future you" images per day (cost cap)
 AI_DAILY_LIMIT = "100"
 COACH_WHATSAPP = "447734432205"
